@@ -167,7 +167,7 @@ if (!('webkitSpeechRecognition' in window)) {
     derp_span.innerHTML = derp_transcript;
 
     //send for translation + get updated div
-    $.post("/atranslates/update",{
+    $.post("/ctranslates/update",{
       text: derp_transcript
     });
     $('#results-trans').load("ctranslates/new");

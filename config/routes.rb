@@ -3,6 +3,8 @@ Demo::Application.routes.draw do
   # first created -> highest priority.
   root :to => 'homes#index'
   resources :homes, :ctranslates
+
+  match "/ctranslates/update" => "ctranslates#update"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
