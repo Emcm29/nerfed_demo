@@ -3,6 +3,10 @@ class CtranslatesController < ApplicationController
 	@@to = 'fr'
 	@@id = nil
 	@@is_first = nil
+
+	def index
+		redirect_to homes_path
+	end
 	
 	def create
 		@trans = Ctranslation.create
