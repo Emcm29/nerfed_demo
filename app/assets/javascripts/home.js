@@ -163,8 +163,14 @@ if (!('webkitSpeechRecognition' in window)) {
     final_transcript = capitalize(final_transcript);
     final_span.innerHTML = linebreak(final_transcript);
 
-    
+   
     derp_span.innerHTML = derp_transcript;
+
+    //send for translation + get updated div
+    $.post("/atranslates/update",{
+      text: derp_transcript
+    });
+    $('#results-trans').load("ctranslates/new");
 
     interim_span.innerHTML = linebreak(interim_transcript);
     if (final_transcript || interim_transcript) {
@@ -227,6 +233,12 @@ function startButton(event) {
     recognition.stop();
     return;
   }
+
+  //Create the Translation object in database
+  $.post('/ctranslates', {
+    derp: 'derp'
+  });
+
   derp_transcript ='';
   derp_span.inner = '';
   final_transcript = '';

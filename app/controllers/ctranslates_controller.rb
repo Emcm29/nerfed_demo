@@ -39,7 +39,7 @@ class CtranslatesController < ApplicationController
 	end
 
 	def new
-		@trans = Ctranslation.find(:all)
+		@trans = Ctranslation.first(:order => 'id DESC')
 		render :partial => "transbox"
 	end
 
