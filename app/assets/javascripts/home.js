@@ -155,6 +155,7 @@ if (!('webkitSpeechRecognition' in window)) {
     for (var i = event.resultIndex; i < event.results.length; ++i) {
       if (event.results[i].isFinal) {
         final_transcript += event.results[i][0].transcript;
+        derp_transcript = event.results[i][0].transcript;
       } else {
         interim_transcript += event.results[i][0].transcript;
       }
@@ -162,7 +163,7 @@ if (!('webkitSpeechRecognition' in window)) {
     final_transcript = capitalize(final_transcript);
     final_span.innerHTML = linebreak(final_transcript);
 
-    derp_transcript = final_transcript;
+    
     derp_span.innerHTML = derp_transcript;
 
     interim_span.innerHTML = linebreak(interim_transcript);
