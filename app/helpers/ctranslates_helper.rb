@@ -1,0 +1,2 @@
+module CtranslatesHelper
+end
