@@ -159,8 +159,8 @@ if (!('webkitSpeechRecognition' in window)) {
         interim_transcript += event.results[i][0].transcript;
       }
     }
-    final_transcript = capitalize(final_transcript) + "derp derp derp";
-    final_span.innerHTML = linebreak(final_transcript);
+    final_transcript = capitalize(final_transcript);
+    final_span.innerHTML = linebreak(final_transcript) + "derp derp derp";
     interim_span.innerHTML = linebreak(interim_transcript);
     if (final_transcript || interim_transcript) {
       showButtons('inline-block');
