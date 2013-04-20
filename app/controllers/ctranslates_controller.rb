@@ -21,7 +21,7 @@ class CtranslatesController < ApplicationController
 		#translator = BingTranslator.new('EoinTestTranslation1', 'hNqLMwhxlXVm39j+zi61h45+zWwBooT4W+v5CacLtjs=')
 		#@translation = translator.translate @source, :from => @@from, :to => @@to
 		@translation = 'silly'
-		@base = Ctranslation.find(@@id)
+		@base = Ctranslation.first(:order => "id DESC")
 
 		if (@@is_first == 0)
 			@source = @base.source
@@ -35,11 +35,11 @@ class CtranslatesController < ApplicationController
 			@@is_first = 0
 		end
 		@base.save
-		redirect_to home_path
+		redirect_to homes_path
 	end
 
 	def new
-		@trans = Ctranslation.first(:order => 'id DESC')
+		@trans = Ctranslation.first(:order => "id DESC")
 		render :partial => "transbox"
 	end
 
