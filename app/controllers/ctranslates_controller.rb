@@ -18,9 +18,9 @@ class CtranslatesController < ApplicationController
 	def update
 		@text = params[:text]
 		#translation magic
-		#translator = BingTranslator.new('EoinTestTranslation1', 'hNqLMwhxlXVm39j+zi61h45+zWwBooT4W+v5CacLtjs=')
-		#@translation = translator.translate @source, :from => @@from, :to => @@to
-		@translation = 'silly'
+		translator = BingTranslator.new('EoinTestTranslation1', 'hNqLMwhxlXVm39j+zi61h45+zWwBooT4W+v5CacLtjs=')
+		@translation = translator.translate @source, :from => @@from, :to => @@to
+		#@translation = 'silly'
 		@base = Ctranslation.first(:order => "id DESC")
 
 		if (@@is_first == 0)
