@@ -1,14 +1,16 @@
 ---
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-application.js: application-3bdea21ec95a0eb61b1ca162b74e3d84.js
-application/index.js: application-3bdea21ec95a0eb61b1ca162b74e3d84.js
+application.js: application-3e0b4bcc886b21a234303c0efb3d81c3.js
+application/index.js: application-3e0b4bcc886b21a234303c0efb3d81c3.js
 ctranslates.js: ctranslates-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 ctranslates/index.js: ctranslates-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 home.js: home-19d26201c8147ef1b2fe3f71c10e10e6.js
 home/index.js: home-19d26201c8147ef1b2fe3f71c10e10e6.js
 homes.js: homes-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
 homes/index.js: homes-a7fa98ba2ef09a5dcc079d3f014a4e3c.js
+show.js: show-31860f20ad05caaa90868c37cb19dcce.js
+show/index.js: show-31860f20ad05caaa90868c37cb19dcce.js
 application.css: application-607631624cdb9501bfd05b04fd1185ba.css
 application/index.css: application-607631624cdb9501bfd05b04fd1185ba.css
 jquery-ui.js: jquery-ui-2a217bc5e93cc9e146f5735629195db8.js

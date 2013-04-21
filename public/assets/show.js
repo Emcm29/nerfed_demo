@@ -1,0 +1,1 @@
+$(document).ready(function(){function e(){$("#shown").load("homes/new")}setinterval(e,5e3)});

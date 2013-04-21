@@ -10,6 +10,7 @@ class HomesController < ApplicationController
 	end
 
 	def new
-
+		@base = Ctranslation.first(:order => "id DESC")
+		render :partial => "shown"
 	end
 end
