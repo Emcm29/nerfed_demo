@@ -158,6 +158,11 @@ if (!('webkitSpeechRecognition' in window)) {
         final_transcript += event.results[i][0].transcript;
         derp_transcript = event.results[i][0].transcript;
         num = num +1;
+        $.post("/ctranslates/update",{
+           text: derp_transcript,
+          count: num
+        });
+    $('#results-trans').load("ctranslates/new");
       } else {
         interim_transcript += event.results[i][0].transcript;
       }
@@ -169,11 +174,7 @@ if (!('webkitSpeechRecognition' in window)) {
     derp_span.innerHTML = derp_transcript + num;
     
     //send for translation + get updated div
-    $.post("/ctranslates/update",{
-      text: derp_transcript,
-      count: num
-    });
-    $('#results-trans').load("ctranslates/new");
+    
 
     interim_span.innerHTML = linebreak(interim_transcript);
     if (final_transcript || interim_transcript) {
