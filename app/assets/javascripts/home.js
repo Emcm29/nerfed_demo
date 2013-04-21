@@ -144,6 +144,7 @@ if (!('webkitSpeechRecognition' in window)) {
     }
   };
 
+  var num = 0;
   recognition.onresult = function(event) {
     var interim_transcript = '';
     if (typeof(event.results) == 'undefined') {
@@ -165,10 +166,11 @@ if (!('webkitSpeechRecognition' in window)) {
 
    
     derp_span.innerHTML = derp_transcript;
-
+    num = num +1;
     //send for translation + get updated div
     $.post("/ctranslates/update",{
-      text: derp_transcript
+      text: derp_transcript,
+      count: num
     });
     $('#results-trans').load("ctranslates/new");
 
