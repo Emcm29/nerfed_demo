@@ -165,7 +165,7 @@ if (!('webkitSpeechRecognition' in window)) {
     final_span.innerHTML = linebreak(final_transcript);
 
    
-    derp_span.innerHTML = derp_transcript;
+    derp_span.innerHTML = derp_transcript + num;
     num = num +1;
     //send for translation + get updated div
     $.post("/ctranslates/update",{
