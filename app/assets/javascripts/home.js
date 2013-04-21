@@ -157,6 +157,7 @@ if (!('webkitSpeechRecognition' in window)) {
       if (event.results[i].isFinal) {
         final_transcript += event.results[i][0].transcript;
         derp_transcript = event.results[i][0].transcript;
+        num = num +1;
       } else {
         interim_transcript += event.results[i][0].transcript;
       }
@@ -166,7 +167,7 @@ if (!('webkitSpeechRecognition' in window)) {
 
    
     derp_span.innerHTML = derp_transcript + num;
-    num = num +1;
+    
     //send for translation + get updated div
     $.post("/ctranslates/update",{
       text: derp_transcript,
