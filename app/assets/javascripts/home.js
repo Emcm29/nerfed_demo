@@ -159,11 +159,9 @@ if (!('webkitSpeechRecognition' in window)) {
 
         derp_transcript = event.results[i][0].transcript;
         num = num +1;
-        lang_code = get_lang_code(select_language);
         $.post("/ctranslates/update",{
            text: derp_transcript,
           count: num,
-          from: lang_code
         });
         $('#results-trans').load("ctranslates/new");
       } else {
