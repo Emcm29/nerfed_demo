@@ -156,13 +156,16 @@ if (!('webkitSpeechRecognition' in window)) {
     for (var i = event.resultIndex; i < event.results.length; ++i) {
       if (event.results[i].isFinal) {
         final_transcript += event.results[i][0].transcript;
+
         derp_transcript = event.results[i][0].transcript;
         num = num +1;
+        lang_code = get_lang_code(select_language);
         $.post("/ctranslates/update",{
            text: derp_transcript,
-          count: num
+          count: num,
+          from: lang_code
         });
-    $('#results-trans').load("ctranslates/new");
+        $('#results-trans').load("ctranslates/new");
       } else {
         interim_transcript += event.results[i][0].transcript;
       }
@@ -282,3 +285,10 @@ function showButtons(style) {
   email_info.style.display = 'none';
 }
 
+function get_lang_code(lang){
+  if(lang == "English"){
+    return "en";
+  }else{
+    return "fr";
+  }
+}

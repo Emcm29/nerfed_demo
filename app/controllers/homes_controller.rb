@@ -11,6 +11,7 @@ class HomesController < ApplicationController
 
 	def new
 		@base = Ctranslation.first(:order => "id DESC")
-		render :partial => "shown"
+		render :partial => "source"
 	end
+
 end
