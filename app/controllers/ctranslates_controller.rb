@@ -5,7 +5,7 @@ class CtranslatesController < ApplicationController
 	@@is_first = nil
 
 	def index
-		redirect_to homes_path
+		@base = Ctranslation.first(:order => "id DESC") 
 	end
 	
 	def create

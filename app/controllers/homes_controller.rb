@@ -14,4 +14,8 @@ class HomesController < ApplicationController
 		render :partial => "source"
 	end
 
+	def edit
+		
+	end
+
 end

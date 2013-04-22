@@ -6,6 +6,7 @@ Demo::Application.routes.draw do
 
   match "/ctranslates/update" => "ctranslates#update"
   match "/homes/view" => "homes#show"
+  match "/homes/puretrans" => "homes#edit"
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
