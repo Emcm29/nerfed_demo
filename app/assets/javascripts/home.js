@@ -289,6 +289,6 @@ function get_lang_code(lang){
   if(lang == "English"){
     return "en";
   }else{
-    return "fr";
+    return "lang";
   }
 }
