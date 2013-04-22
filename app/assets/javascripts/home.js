@@ -159,9 +159,11 @@ if (!('webkitSpeechRecognition' in window)) {
 
         derp_transcript = event.results[i][0].transcript;
         num = num +1;
+        
         $.post("/ctranslates/update",{
            text: derp_transcript,
           count: num,
+   
         });
         $('#results-trans').load("ctranslates/new");
       } else {
@@ -283,10 +285,3 @@ function showButtons(style) {
   email_info.style.display = 'none';
 }
 
-function get_lang_code(lang){
-  if(lang == "English"){
-    return "en";
-  }else{
-    return lang;
-  }
-}
