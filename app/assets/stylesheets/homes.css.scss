@@ -63,6 +63,12 @@ background:grey;
 
     a.c1 {font-weight: normal;}
 
+#transbox{
+  margin-top: 10px;
+  background: white;
+  width: 532px;
+  height: 182px;
+}
 
 
 
@@ -72,8 +78,13 @@ background:grey;
    
 }
 
-p{
+#head-wrapper{
+  border-radius:5px;
+}
+
+#body-wrapper{
   height: 500px;
+  border-radius:5px;
 }
 
 
