@@ -2,40 +2,13 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 body{
-    background: grey;
-}
- 
-#source{
-        float:left;
-        padding-left: 10px;
-}
- 
-#translation{
-  padding-left: 10px;
-}
- 
-p{
-        height: 500px;
-}
- 
-#head-wrapper{
-        background:white;
-        border-radius: 5px;
-}
- 
-#body-wrapper{
-        background:white;
-        border-radius: 5px;
+background:grey;   
 }
 
+/*home*/
 
-
-/*google*/
-
-
-#info {
+    #info {
     font-size: 20px;
     }
     #div_start {
@@ -45,12 +18,14 @@ p{
     text-decoration: none
     }
     #results {
+    background: white;
     font-size: 14px;
     font-weight: bold;
     border: 1px solid #ddd;
     padding: 15px;
     text-align: left;
     min-height: 150px;
+    width: 500px
     }
     #start_button {
     border: 0;
@@ -85,4 +60,30 @@ p{
     display: none;
     margin: 0 70px;
     }
-    
+
+    a.c1 {font-weight: normal;}
+
+
+
+
+
+    /*Show*/
+#shown{
+   
+}
+
+p{
+  height: 500px;
+}
+
+
+#head-wrapper{
+    background: white;   
+}
+
+#body-wrapper{
+    background: white;
+}
+
+    /*Ze Bootstrap*/
+
