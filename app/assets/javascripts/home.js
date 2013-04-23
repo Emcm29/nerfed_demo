@@ -165,7 +165,7 @@ if (!('webkitSpeechRecognition' in window)) {
           count: num,
    
         });
-        $('#results-trans').load("ctranslates/new");
+        $('#transbox').load("ctranslates/new");
       } else {
         interim_transcript += event.results[i][0].transcript;
       }
