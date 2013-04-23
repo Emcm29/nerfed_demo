@@ -247,7 +247,7 @@ function startButton(event) {
   });
 
   derp_transcript ='';
-  derp_span.inner = '';
+ // derp_span.inner = '';
   final_transcript = '';
   recognition.lang = select_dialect.value;
   recognition.start();
