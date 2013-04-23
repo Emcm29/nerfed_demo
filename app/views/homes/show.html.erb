@@ -1,20 +1,24 @@
-<div id="shown">
-	<div id="source">
-		<div id="head-wrapper" class="text-center">
-			<div class="lead" >English</div>
-		</div>
-		<div id="body-wrapper">
-			<p><%= @base.source %></p>
-		</div>
-	</div>
-	<div id="translation">
-		<div id="head-wrapper" class="text-center">
-			<div class="lead">French</div>
-		</div>
-		<div id="body-wrapper">
-			<p class="text-left"><%= @base.translation %></p>
-		</div>
-	</div>
+<div id="shown" class="row-fluid">
+ 
+        <div id="source" class="span4">
+                <h1 id="head-wrapper" class="text-center">
+                        <div class="lead" >English</div>
+                </h1>
+                <div id="body-wrapper">
+                        <p><%= @base.source%></p>
+                </div>
+        </div>
+        <div id="translation" class="span4">
+                <h1 id="head-wrapper" class="text-center">
+                        <div class="lead">French</div>
+                </h1>
+                <div id="body-wrapper">
+                        <p > <%= @base.translation %></p>
+                </div>
+        </div>
 </div>
-
+<div class="alert">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Warning!</strong> Best check yo self, you're not looking too good.
+</div>
 <%= javascript_include_tag "show.js" %>
