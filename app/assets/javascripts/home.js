@@ -174,7 +174,7 @@ if (!('webkitSpeechRecognition' in window)) {
     final_span.innerHTML = linebreak(final_transcript);
 
    
-    derp_span.innerHTML = derp_transcript + num;
+   // derp_span.innerHTML = derp_transcript + num;
     
     //send for translation + get updated div
     
